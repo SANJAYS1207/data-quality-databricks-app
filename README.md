@@ -13,7 +13,8 @@ An interactive, self-service Streamlit application that empowers data teams to b
 
 ### 1. Data Preview (Unity Catalog)
 The app successfully connects to Databricks and fetches live data.
-![Data Preview](images/data_preview.png)
+![Data Preview](<img width="1896" height="781" alt="image" src="https://github.com/user-attachments/assets/63b78995-995b-482c-8535-1c51aaf97914" />
+)
 
 ### 2. Configure Data Quality Rules
 Interactively select columns, apply regex matching, check for nulls, validate ranges, and enforce uniqueness.
