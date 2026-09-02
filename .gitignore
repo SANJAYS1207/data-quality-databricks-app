@@ -1,0 +1,23 @@
+# Virtual environment
+.venv/
+myvenv/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Environment variables
+.env
+
+# VS Code
+.vscode/
+
+# Streamlit
+.streamlit/
+
+# Local test data
+*.csv
+*.xlsx
+
+# Python cache
+.pytest_cache/
