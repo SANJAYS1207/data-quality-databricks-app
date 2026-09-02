@@ -12,6 +12,7 @@ from services.gx_service import (
     run_data_quality_checks,
     search_expectations,
 )
+from services.databricks_service import load_databricks_table
 
 
 # ============================================================
@@ -169,32 +170,28 @@ if "dq_data" not in st.session_state:
 
 
 # ============================================================
-# File Upload
+# Databricks Data Loading
 # ============================================================
 
-uploaded_file = st.file_uploader(
-    "Upload your CSV file",
-    type=["csv"]
-)
+try:
+    with st.spinner("Loading data from Unity Catalog..."):
+        df = load_databricks_table()
+    data_loaded = True
+except Exception as e:
+    st.error(f"Failed to load data from Databricks: {e}")
+    data_loaded = False
 
 
-if uploaded_file is not None:
-
-    # ========================================================
-    # Read Data
-    # ========================================================
-
-    df = pd.read_csv(uploaded_file)
-
+if data_loaded:
 
     # ========================================================
-    # File Information
+    # Data Information
     # ========================================================
 
-    st.success("File uploaded successfully", icon=":material/check_circle:")
+    st.success("Data loaded successfully from Unity Catalog", icon=":material/check_circle:")
 
     st.caption(
-        f"{uploaded_file.name} · {len(df):,} rows · "
+        f"customer_dq · {len(df):,} rows · "
         f"{len(df.columns)} columns"
     )
 
