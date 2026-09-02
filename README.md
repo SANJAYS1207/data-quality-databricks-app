@@ -13,20 +13,23 @@ An interactive, self-service Streamlit application that empowers data teams to b
 
 ### 1. Data Preview (Unity Catalog)
 The app successfully connects to Databricks and fetches live data.
-![Data Preview](<img width="1896" height="781" alt="image" src="https://github.com/user-attachments/assets/63b78995-995b-482c-8535-1c51aaf97914" />
-)
+<img width="1832" height="948" alt="Screenshot 2026-09-02 120403" src="https://github.com/user-attachments/assets/45f8f63c-6089-4046-ae60-3e7a0377aea3" />
+
 
 ### 2. Configure Data Quality Rules
 Interactively select columns, apply regex matching, check for nulls, validate ranges, and enforce uniqueness.
-![Configure Rules](images/rules_config.png)
+<img width="1850" height="950" alt="Screenshot 2026-09-02 120512" src="https://github.com/user-attachments/assets/11cbe9cf-1475-4a39-95eb-7c602682ed09" />
+
 
 ### 3. Execution & Summary Dashboard
 Run the checks and instantly view the Data Quality Score, passing metrics, and detailed failure percentage charts.
-![DQ Summary](images/dashboard.png)
+<img width="1852" height="1112" alt="Screenshot 2026-09-02 120448" src="https://github.com/user-attachments/assets/9f53e55e-8afe-4495-a7a2-14a23ebdae24" />
+
 
 ### 4. Databricks App Deployment
 Fully integrated with Databricks Apps for secure, serverless hosting.
-![Databricks App](images/databricks_app.png)
+<img width="1897" height="883" alt="Screenshot 2026-09-02 120343" src="https://github.com/user-attachments/assets/eb99617f-3804-4e3f-a909-890325bd1bdb" />
+
 
 ## 🛠️ Tech Stack
 - **Frontend:** Streamlit
